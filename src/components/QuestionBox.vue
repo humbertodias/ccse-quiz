@@ -19,22 +19,13 @@
         </b-list-group-item>
       </b-list-group>
 
-      <hr class="my-4" />
-
-
-      <b-button
-        variant="primary"
-        @click="submitAnswer"
-        :disabled="selectedIndex === null || answered"
-      >
-        Enviar
-      </b-button>
-      <b-button @click="previous" variant="success">
+      <!--
+      <b-button @click="previous" variant="success" v-if="index">
         &lt;
       </b-button>
-      <b-button @click="next" variant="success">
-        &gt;
-      </b-button>
+      -->
+      <div class="alert alert-info">{{currentQuestion.hint}}</div>
+
     </b-jumbotron>
 
   </div>
@@ -42,14 +33,14 @@
 
 <script>
 import _ from 'lodash'
-import { isNumber } from 'util';
 
 export default {
   props: {
     currentQuestion: Object,
     previous: Function,
     next: Function,
-    increment: Function
+    increment: Function, 
+    index: Number
   },
   data: function() {
     return {
@@ -81,7 +72,9 @@ export default {
   },
   methods: {
     selectAnswer(index) {
-      this.selectedIndex = index
+      this.selectedIndex = index;
+      // auto submit
+      this.submitAnswer();
     },
     submitAnswer() {
       let isCorrect = false
@@ -91,24 +84,10 @@ export default {
       }
       this.answered = true
 
-      this.increment(isCorrect)
+      this.increment(isCorrect, this.selectedIndex)
     },
 
-    removeItemByValue(array, value) {
-        var index = array.indexOf(value);
-        if (index !== -1) array.splice(index, 1);
-    },
-    fixCorrectAnswerOfCurrentQuestion(){
-      if(isNumber(this.currentQuestion.correct_answer)){
-        let correct_answer_index = this.currentQuestion.correct_answer - 1;
-        let correct_answer = this.currentQuestion.incorrect_answers[correct_answer_index];
-        this.currentQuestion.correct_answer = correct_answer;
-
-        this.removeItemByValue(this.currentQuestion.incorrect_answers, correct_answer);
-      }
-    } ,
     shuffleAnswers() {
-      this.fixCorrectAnswerOfCurrentQuestion();
       let answers = [...this.currentQuestion.incorrect_answers, this.currentQuestion.correct_answer]
       this.shuffledAnswers = _.shuffle(answers)
       this.correctIndex = this.shuffledAnswers.indexOf(this.currentQuestion.correct_answer)

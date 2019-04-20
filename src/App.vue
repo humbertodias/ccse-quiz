@@ -17,6 +17,7 @@
             :next="next"
             :previous="previous"
             :increment="increment"
+            :index="index"
           />
         </b-col>
       </b-row>
@@ -36,6 +37,7 @@
 import Header from './components/Header.vue'
 import QuestionBox from './components/QuestionBox.vue'
 import Footer from './components/Footer.vue'
+import { setTimeout } from 'timers';
 
 export default {
   name: 'app',
@@ -47,6 +49,7 @@ export default {
   data() {
     return {
       questions: [],
+      answers: [],
       index: 0,
       numCorrect: 0,
       numTotal: 0
@@ -61,11 +64,15 @@ export default {
       if(this.index > 0)
         this.index--;
     },
-    increment(isCorrect) {
+    increment(isCorrect, selectedAnswerIndex) {
       if (isCorrect) {
-        this.numCorrect++
+        this.numCorrect++;
       }
       this.numTotal++
+      this.answers[this.index] = selectedAnswerIndex;
+
+      setTimeout(this.next, 2000)
+
     }
   },
   mounted: function() {
@@ -79,32 +86,12 @@ export default {
       return response.json()
     })
     .then((jsonData) => {
-      let results = jsonData.results;
-
-      let sortedQuestions = sortJSON(results, 'id', 'asc');
-      this.questions = sortedQuestions;
-
+      this.questions = jsonData.results;
+      this.answers = new int[this.questions.length];
     });
-
-      function sortJSON(data, key, way = 'asc') {
-        return data.sort(function(a, b) {
-            var x = a[key]; var y = b[key];
-            if (way === 'asc') { return ((x < y) ? -1 : ((x > y) ? 1 : 0)); }
-            if (way === 'desc') { return ((x > y) ? -1 : ((x < y) ? 1 : 0)); }
-        });
-      }
-
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
