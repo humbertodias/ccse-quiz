@@ -2,12 +2,15 @@
 
   <div>
 
-  <b-navbar toggleable>
-      <router-link  to="/">
-        <b-navbar-toggle/>
-      </router-link>
-    <b-navbar-brand>Exame {{numCorrect}}/{{questions.length}}</b-navbar-brand>
+  <b-navbar sticky="true" type="dark" variant="info">
+
+      <b-navbar-nav>
+        <b-nav-item href="/">&lt;</b-nav-item>
+      </b-navbar-nav>
+
+    <b-navbar-brand>Exame {{numTotal}}/{{questions.length}}</b-navbar-brand>
   </b-navbar>
+
 
     <!--
     <Header

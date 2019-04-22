@@ -2,17 +2,17 @@
 
 <div>
 
-  <b-card
-    header="Menu"
-    header-tag="header"
-  >
+  <b-navbar sticky="true" type="dark" variant="info">
+    <b-navbar-brand href="#">Menu</b-navbar-brand>
+  </b-navbar>
+
+  <b-card>
 
     <router-link to="exam">
       <b-card align="center">
       
       <b-img-lazy src="https://mariaortegagarcia.com/wp-content/uploads/2017/10/Free-Trial-7.png"
-      width="150" height="150"
-                    />
+      width="150" height="150"/>
         <b-card-body title="HACER EXAMEN">
           <b-card-text>25 preguntas aleatorías</b-card-text>
         </b-card-body>

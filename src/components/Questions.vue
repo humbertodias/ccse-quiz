@@ -2,11 +2,13 @@
 
   <div>
 
-  <b-navbar toggleable>
-      <router-link  to="/">
-        <b-navbar-toggle/>
-      </router-link>
-    <b-navbar-brand>Questions</b-navbar-brand>
+  <b-navbar sticky="true" type="dark" variant="info">
+
+      <b-navbar-nav>
+        <b-nav-item href="/">&lt;</b-nav-item>
+      </b-navbar-nav>
+
+    <b-navbar-brand>Cuestionario {{numTotal}}/{{questions.length}}</b-navbar-brand>
   </b-navbar>
 
     <!--
