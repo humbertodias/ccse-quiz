@@ -31,6 +31,8 @@
           />
         </b-col>
       </b-row>
+
+    <b-progress :value="numTotal" :max="questions.length" striped show-value show-progress animated></b-progress>
     </b-card>
 
   </div>

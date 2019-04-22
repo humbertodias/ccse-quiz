@@ -31,7 +31,10 @@
           />
         </b-col>
       </b-row>
+
+    <b-progress :value="numTotal" :max="questions.length" striped show-value show-progress animated></b-progress>
     </b-card>
+
 
   </div>
 
@@ -81,7 +84,6 @@ export default {
   },
   mounted: function() {
 //    let url = 'https://opentdb.com/api.php?amount=10&category=27&type=multiple';
-//    url = 'static.json';
     let url = 'preguntas-ok.json';
     fetch(url, {
       method: 'get'
