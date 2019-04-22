@@ -19,12 +19,7 @@
         </b-list-group-item>
       </b-list-group>
 
-      <!--
-      <b-button @click="previous" variant="success" v-if="index">
-        &lt;
-      </b-button>
-      -->
-      <div class="alert alert-info">{{currentQuestion.hint}}</div>
+      <div class="alert alert-info" v-if="currentQuestion.hint">{{currentQuestion.hint}}</div>
 
     </b-jumbotron>
 

@@ -2,7 +2,7 @@
 
   <div>
 
-  <b-navbar sticky="true" type="dark" variant="info">
+  <b-navbar sticky type="dark" variant="info">
 
       <b-navbar-nav>
         <b-nav-item href="/">&lt;</b-nav-item>
@@ -11,15 +11,12 @@
     <b-navbar-brand>Exame {{numTotal}}/{{questions.length}}</b-navbar-brand>
   </b-navbar>
 
-
     <!--
     <Header
       :numCorrect="numCorrect"
       :numTotal="numTotal"
     />
     -->
-
-
 
     <b-card>
       <b-row>
@@ -93,7 +90,8 @@ export default {
       return response.json()
     })
     .then((jsonData) => {
-      this.questions = jsonData.results.slice(0,25);
+      let questions = jsonData.results.slice(0,25);
+      this.questions = questions;
       //this.answers = new int[this.questions.length];
     });
   }

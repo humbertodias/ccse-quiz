@@ -2,7 +2,7 @@
 
   <div>
 
-  <b-navbar sticky="true" type="dark" variant="info">
+  <b-navbar sticky type="dark" variant="info">
 
       <b-navbar-nav>
         <b-nav-item href="/">&lt;</b-nav-item>
@@ -81,7 +81,6 @@ export default {
   },
   mounted: function() {
 //    let url = 'https://opentdb.com/api.php?amount=10&category=27&type=multiple';
-//    url = 'static.json';
     let url = 'preguntas-ok.json';
     fetch(url, {
       method: 'get'
@@ -90,7 +89,8 @@ export default {
       return response.json()
     })
     .then((jsonData) => {
-      this.questions = jsonData.results;
+      let questionShuffle = _.shuffle(jsonData.results);
+      this.questions = questionShuffle;
       //this.answers = new int[this.questions.length];
     });
   }

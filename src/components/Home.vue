@@ -2,7 +2,7 @@
 
 <div>
 
-  <b-navbar sticky="true" type="dark" variant="info">
+  <b-navbar sticky type="dark" variant="info">
     <b-navbar-brand href="#">Menu</b-navbar-brand>
   </b-navbar>
 
