@@ -1,38 +1,26 @@
-import Vue from 'vue'
-import BootstrapVue from 'bootstrap-vue'
+import Vue from 'vue';
+import App from './App.vue';
+import router from './router';
 
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+Vue.config.productionTip = false;
 
+// import IonicVue from '@ionic/vue';
+// Vue.use(IonicVue);
 
-import HomePage from './components/Home.vue'
-import InfoPage from './components/Info.vue'
-import StatsPage from './components/Stats.vue'
-import RedoPage from './components/Redo.vue'
-import QuestionsPage from './components/Questions.vue'
-import ExamPage from './components/Exam.vue'
-
-import VueRouter from 'vue-router'
-Vue.use(VueRouter)
-const router = new VueRouter({
-  routes: [
-    { path: '/', component: HomePage },
-    { path: '/info', component: InfoPage },
-    { path: '/stats', component: StatsPage },
-    { path: '/redo', component: RedoPage },
-    { path: '/questions', component: QuestionsPage },
-    { path: '/exam', component: ExamPage }
-  ]
-})
+// Import IonVuePage component
+import IonVuePage from '@/components/IonVuePage.vue'
 
 
-import App from './App.vue'
+import Ionic from '@ionic/vue';
+import '@ionic/core/css/ionic.bundle.css';
 
-Vue.use(BootstrapVue)
-Vue.config.productionTip = false
+// Enable the ionic-vue plugin
+Vue.use(Ionic)
 
+// Register as global component to be used as boilerplate
+Vue.component('IonVuePage', IonVuePage)
 
 new Vue({
   router,
-  render: h => h(App),
-}).$mount('#app')
+  render: h => h(App)
+}).$mount('#app');
