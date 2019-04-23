@@ -92,7 +92,7 @@ export default {
         ...this.currentQuestion.incorrect_answers,
         this.currentQuestion.correct_answer
       ];
-      this.shuffledAnswers = _.shuffle(answers);
+      this.shuffledAnswers = answers.sort(function() { return 0.5 - Math.random() });
       this.correctIndex = this.shuffledAnswers.indexOf(
         this.currentQuestion.correct_answer
       );

@@ -21,7 +21,7 @@ export default new IonicVueRouter({
     { path: '/redo', name:"redo", component: RedoPage },
     { path: '/questions', name:"questions", component: QuestionsPage },
     { path: '/exam', name:"exam", component: ExamPage },
-    { path: '/glossary', name:"glossary", component: GlossaryPage }
+    { path: '/glossary', name:"glossary", component: GlossaryPage },
   ]
 });
 

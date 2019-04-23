@@ -30,8 +30,8 @@ npm run lint
 ### Ionic+Vue+Android
 
 ```
-npm run build
-npx cap add android
+rm -rf android
+npm run build && px cap add android
 ```
 
 [mobile-apps-capacitor-vue-js](https://www.smashingmagazine.com/2018/07/mobile-apps-capacitor-vue-js)

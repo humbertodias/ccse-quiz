@@ -8,7 +8,8 @@
 
     <ion-content>
       <ion-grid>
-        <ion-row>
+
+        <ion-row align-items-stretch>
           <ion-col class="ion-text-center">
             <router-link to="exam">
               <ion-card>
@@ -21,7 +22,8 @@
             </router-link>
           </ion-col>
         </ion-row>
-        <ion-row>
+
+        <ion-row align-items-stretch>
           <ion-col class="ion-text-center">
             <router-link to="questions">
               <ion-card padding>
@@ -45,7 +47,8 @@
             </router-link>
           </ion-col>
         </ion-row>
-        <ion-row>
+
+        <ion-row align-items-stretch>
           <ion-col class="ion-text-center">
             <router-link to="stats">
               <ion-card padding>
@@ -70,6 +73,7 @@
             </router-link>
           </ion-col>
         </ion-row>
+
       </ion-grid>
     </ion-content>
   </ion-page>

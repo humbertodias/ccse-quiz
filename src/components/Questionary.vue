@@ -3,7 +3,7 @@
   <IonVuePage :title="title">
 
     <Question
-      v-if="questions.length"
+      v-if="index < questions.length"
       :currentQuestion=questions[index]
       :next="next"
       :increment="increment"
@@ -21,15 +21,14 @@
 </template>
 
 <script>
-import _ from 'lodash'
 import Question from './Question.vue'
-
 import { setTimeout } from 'timers';
 
 export default {
     props: {
       title: { type: String, default: '' },
-      questions: { type: Array, default: [] },
+      questions: { type: Array },
+      timeout: { type: Number, default: 100},
     },
   components: {
     Question
@@ -45,9 +44,11 @@ export default {
   methods: {
     next() {
         this.index++;
+        if(this.hasFinished()) {
+          this.goToStats();
+        } 
     },
     increment(isCorrect, selectedAnswerIndex) {
-      if(this.index >= this.questions.length) return;
 
       if (isCorrect) {
         this.numCorrect++;
@@ -55,8 +56,15 @@ export default {
       this.numTotal++
       this.answers[this.index] = selectedAnswerIndex;
 
-      setTimeout(this.next, 2000)
-    }
+      setTimeout(this.next, this.timeout);
+    },
+    hasFinished(){
+      return this.index >= this.questions.length;
+    },
+    goToStats() {
+      this.$router.push({ name: 'stats', 
+                params: { numCorrect: this.numCorrect, numTotal: this.numTotal }});
+    },
   },
 }
 </script>
