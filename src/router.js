@@ -1,6 +1,6 @@
-import Vue from 'vue'
-
 import { IonicVueRouter } from '@ionic/vue';
+
+import Vue from 'vue'
 Vue.use(IonicVueRouter);
 
 import HomePage from './views/Home.vue'

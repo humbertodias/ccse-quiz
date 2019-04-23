@@ -9,11 +9,21 @@
 
     <ion-content>
 
-      <ion-list>
-        <ion-item v-for="item in items" :key="item[0]">
-          {{item}}
-        </ion-item>
-      </ion-list>
+        <ion-card padding v-for="item in items" :key="item[0]">
+          <ion-card-header>
+            <ion-card-title>
+              {{item[0]}}
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <h3>{{item[1]}}</h3>
+            <h3>{{item[2]}}</h3>
+            <h3>{{item[3]}}</h3>
+            <h3>{{item[4]}}</h3>
+            <h3>{{item[5]}}</h3>
+            <h3>{{item[6]}}</h3>
+          </ion-card-content>
+        </ion-card>
 
     </ion-content>
 

@@ -27,6 +27,16 @@ npm run test
 npm run lint
 ```
 
+### Ionic+Vue+Android
+
+```
+npm run build
+npx cap add android
+```
+
+[mobile-apps-capacitor-vue-js](https://www.smashingmagazine.com/2018/07/mobile-apps-capacitor-vue-js)
+
+
 ### Customize configuration
 
 See [Configuration Reference](https://cli.vuejs.org/config).

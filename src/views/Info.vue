@@ -58,3 +58,9 @@
 
   </IonVuePage>
 </template>
+
+<style>
+ion-col > a {
+  text-decoration: none;
+}
+</style>
