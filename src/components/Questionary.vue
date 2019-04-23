@@ -6,7 +6,6 @@
       v-if="questions.length"
       :currentQuestion=questions[index]
       :next="next"
-      :previous="previous"
       :increment="increment"
       :index="index"
     />
@@ -45,14 +44,11 @@ export default {
   },
   methods: {
     next() {
-      if(this.index < this.questions.length)
         this.index++;
     },
-    previous() {
-      if(this.index > 0)
-        this.index--;
-    },
     increment(isCorrect, selectedAnswerIndex) {
+      if(this.index >= this.questions.length) return;
+
       if (isCorrect) {
         this.numCorrect++;
       }
@@ -64,6 +60,3 @@ export default {
   },
 }
 </script>
-
-<style>
-</style>

@@ -7,13 +7,13 @@
     </ion-header>
 
     <ion-content>
-      <ion-grid class="my-grid">
+      <ion-grid>
         <ion-row>
-          <ion-col>
+          <ion-col class="ion-text-center">
             <router-link to="exam">
               <ion-card>
                 <ion-card-content>
-                  <!--<ion-img src="/ccse.png" ></ion-img>-->
+                  <ion-icon size="large" name="clipboard"></ion-icon>
                   <h5>HACER EXAMEN</h5>
                   <h6>25 preguntas aleatorias</h6>
                 </ion-card-content>
@@ -82,8 +82,5 @@ export default {};
 <style>
 ion-col > a {
   text-decoration: none;
-}
-#my-grid{
-  background-color: red;
 }
 </style>

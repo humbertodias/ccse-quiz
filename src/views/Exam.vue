@@ -18,17 +18,14 @@ export default {
     }
   },
   mounted: function() {
-//    let url = 'https://opentdb.com/api.php?amount=10&category=27&type=multiple';
-    let url = 'preguntas.json';
-    fetch(url, {
+    fetch('preguntas.json', {
       method: 'get'
     })
     .then((response) => {
       return response.json()
     })
     .then((jsonData) => {
-      this.questions = jsonData.results;
-      //this.answers = new int[this.questions.length];
+      this.questions = jsonData.results.slice(0,25);
     });
   }
 

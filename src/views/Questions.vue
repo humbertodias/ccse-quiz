@@ -18,15 +18,14 @@ export default {
     }
   },
   mounted: function() {
-    let url = 'preguntas.json';
-    fetch(url, {
+    fetch('preguntas.json', {
       method: 'get'
     })
     .then((response) => {
       return response.json()
     })
     .then((jsonData) => {
-      this.questions = jsonData.results.slice(0,25);
+      this.questions = jsonData.results;
     });
   }
 

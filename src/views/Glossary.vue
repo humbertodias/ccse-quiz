@@ -38,8 +38,7 @@ export default {
     }
   },
   mounted: function() {
-    let url = 'glosario.json';
-    fetch(url, {
+    fetch('glosario.json', {
       method: 'get'
     })
     .then((response) => {

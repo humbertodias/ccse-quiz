@@ -34,7 +34,6 @@ import Modal from "../components/Modal.vue";
 export default {
   props: {
     currentQuestion: Object,
-    previous: Function,
     next: Function,
     increment: Function,
     index: Number
@@ -70,6 +69,8 @@ export default {
   },
   methods: {
     selectAnswer(index) {
+      if(this.answered) return;
+
       this.selectedIndex = index;
       // auto submit
       this.submitAnswer();
@@ -104,7 +105,7 @@ export default {
           this.selectedIndex === index &&
           this.correctIndex !== index
         ) {
-          this.answerColor = "warning";
+          this.answerColor = "danger";
         }
       }
     },
