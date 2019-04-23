@@ -31,8 +31,12 @@ npm run lint
 
 ```
 rm -rf android
-npm run build && px cap add android
+npm run build
+npx cap add android
+cd android && gradle build
 ```
+
+APK inside android/app/build/outputs/apk/release
 
 [mobile-apps-capacitor-vue-js](https://www.smashingmagazine.com/2018/07/mobile-apps-capacitor-vue-js)
 
