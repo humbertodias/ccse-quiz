@@ -60,7 +60,7 @@
 </template>
 
 <style>
-ion-col > a {
+a {
   text-decoration: none;
 }
 </style>

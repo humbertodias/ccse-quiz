@@ -12,10 +12,12 @@
       <slot />
     </ion-content>
     <ion-footer>
+      <!--
       <div class="footer-text">Carefully crafted by</div>
       <a href="https://labs.moduscreate.com" target="_blank">
         <img src="@/images/modus-labs-logo.svg" class="modus-labs-logo" alt="Modus Labs Logo" />
       </a>
+      -->
     </ion-footer>
   </ion-page>
 </template>
