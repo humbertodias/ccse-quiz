@@ -31,8 +31,6 @@
         <ion-card-content>{{resultLabel}} con {{resultPercentage}}% era esperado 60%</ion-card-content>
       </ion-card>
 
-    </ion-content>
-
   </IonVuePage>
 
 </template>
