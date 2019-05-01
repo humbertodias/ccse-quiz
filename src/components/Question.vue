@@ -2,9 +2,12 @@
   <div>
 
     <ion-item>
-      <ion-label>
-        <h2>{{ currentQuestion.id}} - {{ currentQuestion.question }}</h2>
-      </ion-label>
+      <ion-text>
+      {{ currentQuestion.id}} - {{ currentQuestion.question }}
+      </ion-text>
+    </ion-item>
+
+    <ion-item>
       <ion-icon
         name="help-circle-outline"
         slot="end"
@@ -12,8 +15,6 @@
         @click="openModal(currentQuestion.id,currentQuestion.hint)"
       ></ion-icon>
     </ion-item>
-
-    <br>
 
     <ion-card
       v-for="(answer, index) in shuffledAnswers"
