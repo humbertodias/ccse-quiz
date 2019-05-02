@@ -19,6 +19,24 @@
       </ion-card>
       </router-link>
 
+      <router-link to="links">
+      <ion-card>
+        <ion-item>
+          <ion-label>Enlaces</ion-label>
+          <ion-icon name="arrow-dropright-circle" slot="end"></ion-icon>
+        </ion-item>
+      </ion-card>
+      </router-link>
+
+      <router-link to="acronyms">
+      <ion-card>
+        <ion-item>
+          <ion-label>Acrónimos</ion-label>
+          <ion-icon name="arrow-dropright-circle" slot="end"></ion-icon>
+        </ion-item>
+      </ion-card>
+      </router-link>
+
       <ion-card>
         <ion-item>
           <ion-label>Inventario general de contenidos</ion-label>

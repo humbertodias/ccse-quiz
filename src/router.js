@@ -11,6 +11,8 @@ import RedoPage from './views/Redo.vue'
 import QuestionsPage from './views/Questions.vue'
 import ExamPage from './views/Exam.vue'
 import GlossaryPage from './views/Glossary.vue'
+import LinksPage from './views/Links.vue'
+import AcronymsPage from './views/Acronyms.vue'
 
 export default new IonicVueRouter({
   mode: 'history',
@@ -24,6 +26,8 @@ export default new IonicVueRouter({
     { path: '/questions', name:"questions", component: QuestionsPage },
     { path: '/exam', name:"exam", component: ExamPage },
     { path: '/glossary', name:"glossary", component: GlossaryPage },
+    { path: '/links', name:"links", component: LinksPage },
+    { path: '/acronyms', name:"acronyms", component: AcronymsPage },
   ]
 });
 

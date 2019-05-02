@@ -14,7 +14,6 @@ ios-dep:
 ios:	clean	ios-dep
 	npm run build
 	npx cap add ios
-#	cd ios && gradle build
 	find android -name "*.ipa"
 
 vue-cli-install:
