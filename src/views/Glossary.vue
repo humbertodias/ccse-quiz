@@ -34,6 +34,7 @@
 export default {
   data() {
     return {
+      itemsOriginal: [],
       items: [],
     }
   },
@@ -41,20 +42,18 @@ export default {
     fetch('glosario.json', {
       method: 'get'
     })
-    .then((response) => {
+    .then(response => {
       return response.json()
     })
-    .then((jsonData) => {
-      this.items = jsonData;
+    .then(jsonData => {
+      this.itemsOriginal = jsonData;
+      this.items = this.itemsOriginal;
     });
   },
   methods:{
-   // TODO
    handleInput(evt){  
      let searchTerm = evt.srcElement.value;
-     console.log(searchTerm)
-     return this.items.filter((item) => {  
-       console.log("item[0]", item[0])
+     this.items = this.itemsOriginal.filter(item => {  
        return item[0].toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;  
      });     
    }  
