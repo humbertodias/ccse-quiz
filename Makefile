@@ -1,5 +1,7 @@
-android:
-	rm -rf android
+clean:
+	rm -rf android ios
+
+android:	clean
 	npm run build
 	npx cap add android
 	cd android && gradle build
@@ -9,8 +11,7 @@ ios-dep:
 	#sudo xcode-select --install
 	sudo gem install cocoapods
 
-ios:	ios-dep
-	rm -rf ios
+ios:	clean	ios-dep
 	npm run build
 	npx cap add ios
 #	cd ios && gradle build
@@ -18,3 +19,5 @@ ios:	ios-dep
 
 vue-cli-install:
 	npm install -g @vue/cli
+
+
