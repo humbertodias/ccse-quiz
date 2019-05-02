@@ -2,14 +2,15 @@
   <ion-page class="ion-page" main>
     <ion-header>
       <ion-toolbar color="danger">
-        <ion-title>Home</ion-title>
+        <ion-title>CCSE</ion-title>
       </ion-toolbar>
     </ion-header>
 
     <ion-content>
+
       <ion-grid>
 
-        <ion-row >
+        <ion-row>
           <ion-col class="ion-text-center">
             <router-link to="exam">
               <ion-card class="card-expand">
@@ -73,6 +74,21 @@
             </router-link>
           </ion-col>
         </ion-row>
+
+        <ion-row>
+          <ion-col class="ion-text-center">
+            <router-link to="exam-years">
+              <ion-card class="card-expand">
+                <ion-card-content>
+                  <ion-icon size="large" name="clipboard"></ion-icon>
+                  <h5>EXÁMENES ANTERIORES</h5>
+                  <h6>25 preguntas</h6>
+                </ion-card-content>
+              </ion-card>
+            </router-link>
+          </ion-col>
+        </ion-row>
+
 
       </ion-grid>
     </ion-content>

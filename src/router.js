@@ -13,6 +13,7 @@ import ExamPage from './views/Exam.vue'
 import GlossaryPage from './views/Glossary.vue'
 import LinksPage from './views/Links.vue'
 import AcronymsPage from './views/Acronyms.vue'
+import ExamYearsPage from './views/ExamYears.vue'
 
 export default new IonicVueRouter({
   mode: 'history',
@@ -28,6 +29,7 @@ export default new IonicVueRouter({
     { path: '/glossary', name:"glossary", component: GlossaryPage },
     { path: '/links', name:"links", component: LinksPage },
     { path: '/acronyms', name:"acronyms", component: AcronymsPage },
+    { path: '/exam-years', name:"exam-years", component: ExamYearsPage },
   ]
 });
 
