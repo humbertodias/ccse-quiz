@@ -8,7 +8,7 @@
   </ion-toolbar>
 
     <ion-content>
-      <ion-card padding v-for="item in items" :key="item[0]">
+      <ion-card v-for="item in items" :key="item[0]">
         <ion-item lines="none">
           <ion-label>
             <h3>{{item[0]}}</h3>

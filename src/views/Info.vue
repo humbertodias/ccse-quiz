@@ -5,7 +5,7 @@
       
       <ion-card>
         <ion-item href="https://examenes.cervantes.es/es/ccse/examen">
-          <ion-label>Especificaciones de la pruba CCSE</ion-label>
+          <ion-label>Especificaciones de la prueba</ion-label>
           <ion-icon name="document" slot="end"></ion-icon>
         </ion-item>
       </ion-card>
@@ -55,7 +55,7 @@
         <ion-item href="https://examenes.cervantes.es/sites/default/files/ccse_manual_2019.pdf">
           <ion-label>
             Manual CCSE 2019
-            <p>prepara los exámenes a partir de enero 2019</p>
+            <p>preparación para los exámenes</p>
           </ion-label>
 
           <ion-icon name="document" slot="end"></ion-icon>
@@ -65,8 +65,8 @@
       <ion-card>
         <ion-item href="https://examenes.cervantes.es/es/ccse">
           <ion-label>
-            <h3>Sitio web oficial</h3>
-            <p>https://examenes.cervantes.es/es/ccse</p>
+            Sitio web oficial
+            <p>examenes.cervantes.es/es/ccse</p>
           </ion-label>
           <ion-icon name="globe" slot="end"></ion-icon>
         </ion-item>

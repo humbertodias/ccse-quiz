@@ -8,13 +8,12 @@
   </ion-toolbar>
 
     <ion-content>
-      <ion-card padding v-for="item in items" :key="item[0]">
+      <ion-card v-for="item in items" :key="item[0]">
         <ion-item :href="item[1]" lines="none">
           <ion-label>
             <h3>{{item[0]}}</h3>
             <p>{{item[1]}}</p>
           </ion-label>
-          <ion-icon name="globe" slot="end"></ion-icon>
         </ion-item>
       </ion-card>
 

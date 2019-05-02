@@ -9,7 +9,7 @@
 
     <ion-content>
 
-        <ion-card padding v-for="item in items" :key="item[0]">
+        <ion-card v-for="item in items" :key="item[0]">
           <ion-card-header>
             <ion-card-title>
               {{item[0]}}

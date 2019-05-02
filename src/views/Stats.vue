@@ -75,7 +75,7 @@ export default {
       }
 
       let total = this.corrects + this.wrongs;
-      this.resultPercentage = Math.round( (this.corrects / total) * 100);
+      this.resultPercentage = Math.round( (this.corrects / total) * 100) || 0;
       if(this.resultPercentage >= 60){
         this.resultLabel = 'APTO';
         this.resultColor = 'success';
