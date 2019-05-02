@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint --fix"
   },
   "dependencies": {
     "@capacitor/android": "^1.0.0-beta.19",
@@ -16,7 +16,8 @@
     "bootstrap-vue": "2.0.0-rc.13",
     "lodash": "4.17.11",
     "vue": "^2.6.10",
-    "vue-router": "^3.0.6"
+    "vue-router": "^3.0.6",
+    "vue2-storage": "^3.4.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.6.0",

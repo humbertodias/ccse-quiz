@@ -2,19 +2,26 @@
 
   <IonVuePage :title="title">
 
-    <Question
-      v-if="index < questions.length"
-      :currentQuestion=questions[index]
-      :next="next"
-      :increment="increment"
-      :index="index"
-    />
+    <div v-if="index < questions.length">
 
-    <ion-item text-center>
-      <ion-label>{{numTotal}} de {{questions.length}}</ion-label>
-    </ion-item>
-    
-    <ion-progress-bar color="danger" :value="numTotal/questions.length"></ion-progress-bar>
+      <Question
+        :currentQuestion=questions[index]
+        :next="next"
+        :increment="increment"
+        :index="index"
+      />
+
+      <ion-item text-center>
+        <ion-label>{{numTotal}} de {{questions.length}}</ion-label>
+      </ion-item>
+      
+      <ion-progress-bar color="danger" :value="numTotal/questions.length"></ion-progress-bar>
+
+    </div>
+
+    <ion-card v-if="questions.length == 0" text-center >
+        <ion-card-content>No hay preguntas</ion-card-content>
+    </ion-card>
 
   </IonVuePage>
 
@@ -23,6 +30,8 @@
 <script>
 import Question from './Question.vue'
 import { setTimeout } from 'timers';
+
+import storage from '../storage'
 
 export default {
     props: {
@@ -38,7 +47,7 @@ export default {
       answers: [],
       index: 0,
       numCorrect: 0,
-      numTotal: 0
+      numTotal: 0,
     }
   },
   methods: {
@@ -49,9 +58,12 @@ export default {
         } 
     },
     increment(isCorrect, selectedAnswerIndex) {
-
+      let question = this.questions[this.index];
       if (isCorrect) {
         this.numCorrect++;
+        storage.removeAndSaveRedoQuestion(question);
+      } else {
+        storage.appendAndSaveRedoQuestion(question);
       }
       this.numTotal++
       this.answers[this.index] = selectedAnswerIndex;

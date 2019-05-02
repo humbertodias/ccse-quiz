@@ -7,6 +7,7 @@
 
 <script>
 import Questionary from '../components/Questionary.vue'
+import storage from '../storage'
 
 export default {
   components: {
@@ -18,17 +19,8 @@ export default {
     }
   },
   mounted: function() {
-    fetch('preguntas.json', {
-      method: 'get'
-    })
-    .then((response) => {
-      return response.json()
-    })
-    .then((jsonData) => {
-      this.questions = jsonData.results;
-    });
+    this.questions = storage.getRedoQuestions();
   }
-
 }
 </script>
 

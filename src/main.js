@@ -4,21 +4,17 @@ import router from './router';
 
 Vue.config.productionTip = false;
 
-// import IonicVue from '@ionic/vue';
-// Vue.use(IonicVue);
-
 // Import IonVuePage component
-import IonVuePage from '@/components/IonVuePage.vue'
-
+import IonVuePage from '@/components/IonVuePage.vue';
 
 import Ionic from '@ionic/vue';
 import '@ionic/core/css/ionic.bundle.css';
 
 // Enable the ionic-vue plugin
-Vue.use(Ionic)
+Vue.use(Ionic);
 
 // Register as global component to be used as boilerplate
-Vue.component('IonVuePage', IonVuePage)
+Vue.component('IonVuePage', IonVuePage);
 
 Vue.config.productionTip = false;
 Vue.config.ignoredElements = [/^ion-/];
