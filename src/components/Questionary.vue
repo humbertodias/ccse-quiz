@@ -10,8 +10,8 @@
       :index="index"
     />
 
-    <ion-item>
-      <ion-label slot="end">{{numTotal}} de {{questions.length}}</ion-label>
+    <ion-item text-center>
+      <ion-label>{{numTotal}} de {{questions.length}}</ion-label>
     </ion-item>
     
     <ion-progress-bar color="danger" :value="numTotal/questions.length"></ion-progress-bar>

@@ -7,12 +7,13 @@
       </ion-text>
     </ion-item>
 
-    <ion-item>
+    <ion-item lines="none">
       <ion-icon
         name="help-circle-outline"
         slot="end"
         v-if="currentQuestion.hint"
         @click="openModal(currentQuestion.id,currentQuestion.hint)"
+        style="cursor: pointer"
       ></ion-icon>
     </ion-item>
 
@@ -21,7 +22,7 @@
       :key="index"
       @click.prevent="selectAnswer(index)"
       :color="answer && index == selectedIndex ? answerColor : ''"
-      style="cursor: pointer;"
+      style="cursor: pointer"
     >
       <ion-card-content>{{ answer }}</ion-card-content>
     </ion-card>
