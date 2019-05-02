@@ -27,13 +27,14 @@ npm run test
 npm run lint
 ```
 
-### Ionic+Vue+Android
+### Mobile
 
 ```
-make apk
+make android
+make ios
 ```
 
-APK inside android/app/build/outputs/apk/release
+For iOS, open App.xcworkspace
 
 [mobile-apps-capacitor-vue-js](https://www.smashingmagazine.com/2018/07/mobile-apps-capacitor-vue-js)
 
