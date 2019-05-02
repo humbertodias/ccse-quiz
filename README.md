@@ -30,10 +30,7 @@ npm run lint
 ### Ionic+Vue+Android
 
 ```
-rm -rf android
-npm run build
-npx cap add android
-cd android && gradle build
+make apk
 ```
 
 APK inside android/app/build/outputs/apk/release
@@ -44,6 +41,8 @@ APK inside android/app/build/outputs/apk/release
 ### Customize configuration
 
 See [Configuration Reference](https://cli.vuejs.org/config).
+
+* [Capacitor](https://capacitor.ionicframework.com/docs/getting-started/)
 <!--
 https://www.tandemmadrid.com/tandem/wp-content/uploads/pdf/CCSE_2019-preguntas-tarea-1.pdf
 
