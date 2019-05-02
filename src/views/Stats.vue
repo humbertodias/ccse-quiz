@@ -1,73 +1,88 @@
 <template>
-
   <IonVuePage title="Estadistícas">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-card class="ion-text-center">
+            <ion-card-header>
+              <ion-icon size="large" name="thumbs-up"></ion-icon>
+            </ion-card-header>
+            <ion-card-content>
+              {{corrects}} Correctas
+              <p>en total</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col>
+          <ion-card class="ion-text-center">
+            <ion-card-header>
+              <ion-icon size="large" name="close-circle"></ion-icon>
+            </ion-card-header>
+            <ion-card-content>
+              {{wrongs}} Fallos
+              <p>en total</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-card :color="resultColor" class="ion-text-center">
+            <ion-card-content>{{resultPercentage}}%</ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
-      <ion-card>
-
-        <ion-item>
-          <div style="margin: 0 auto;">
-            <ion-button @click="goToHome()">
-              <ion-icon name="home"></ion-icon>
-            </ion-button>
-          </div>
-        </ion-item>
-
-        <ion-item>
-          <ion-label>Correctas</ion-label>
-          <ion-badge slot="end" color="success">{{numCorrect}}</ion-badge>
-        </ion-item>
-        <ion-item>
-          <ion-label>Incorrectas</ion-label>
-          <ion-badge slot="end" color="danger">{{numTotal-numCorrect}}</ion-badge>
-        </ion-item>
-        <ion-item>
-          <ion-label>Total</ion-label>
-          <ion-badge slot="end" color="primary">{{numTotal}}</ion-badge>
-        </ion-item>
-
-      </ion-card>
-
-      <ion-card :color="resultColor" class="ion-text-center">
-        <ion-card-content>{{resultLabel}} con {{resultPercentage}}% era esperado 60%</ion-card-content>
-      </ion-card>
-
+    <ion-list>
+      <ion-item>
+        <ion-label class="ion-text-center">Historial de Examenes</ion-label>
+      </ion-item>
+      <ion-item v-for="stat in stats" :key="stat.date" class="ion-text-wrap">
+        <ion-label class="ion-text-wrap">
+          <h5>{{stat.date}}</h5>
+          <p>{{stat.numCorrect}} de {{stat.numTotal}} preguntas correctas</p>
+        </ion-label>
+        <ion-icon :name="stat.ionIcon" slot="end"></ion-icon>
+      </ion-item>
+    </ion-list>
   </IonVuePage>
-
 </template>
 
 <script>
+import storage from "../storage";
 
 export default {
   data: function() {
     return {
+      stats: [],
+      corrects: 0,
+      wrongs: 0,
       resultLabel: "NO APTO",
       resultColor: "danger",
-      resultPercentage: 0,
-      numCorrect:  0,
-      numTotal: 0,
+      resultPercentage: 0
     };
   },
-
   mounted: function() {
-    if(this.$route.params.numCorrect)
-      this.numCorrect = this.$route.params.numCorrect;
+    this.stats = storage.getStats();
+    this.summary();
+  },
+  methods: {
+    summary() {
+      for (var stat of this.stats) {
+        this.corrects += stat.numCorrect;
+        this.wrongs += stat.numTotal - stat.numCorrect;
+      }
 
-    if(this.$route.params.numTotal)
-      this.numTotal = this.$route.params.numTotal;
-    
-    if(this.numTotal > 0 && this.numCorrect > 0){
-      this.resultPercentage = Math.round( (this.numCorrect / this.numTotal) * 100);
+      let total = this.corrects + this.wrongs;
+      this.resultPercentage = Math.round( (this.corrects / total) * 100);
       if(this.resultPercentage >= 60){
         this.resultLabel = 'APTO';
         this.resultColor = 'success';
       } 
+
     }
-  },
-  methods: {
-    goToHome(){
-        this.$router.push('/'); 
-    },
-  },
+  }
 };
 </script>
 

@@ -4,15 +4,22 @@ import Vue2Storage from 'vue2-storage'
 Vue.use(Vue2Storage)
 
 export default {
-  REDO_KEY : 'redoQuestions',
-  getRedoQuestions(){
-    return localStorage.getItem(this.REDO_KEY) 
-                        ? JSON.parse(localStorage.getItem(this.REDO_KEY))
+  getJsonArray(key){
+    return localStorage.getItem(key) 
+                        ? JSON.parse(localStorage.getItem(key))
                         : [];
   },
+  saveJsonArray(key, array){
+    const json = JSON.stringify(array);
+    localStorage.setItem(key, json);
+  },
+
+  REDO_KEY : 'redoQuestions',
+  getRedoQuestions(){
+    return this.getJsonArray(this.REDO_KEY);
+  },
   saveRedoQuestions(redoQuestions){
-    const parsed = JSON.stringify(redoQuestions);
-    localStorage.setItem(this.REDO_KEY, parsed);
+    this.saveJsonArray(this.REDO_KEY, redoQuestions);
   },
   appendAndSaveRedoQuestion(question){
     let redoQuestions = this.getRedoQuestions();
@@ -25,6 +32,18 @@ export default {
       return q.id != question.id;
     });
     this.saveRedoQuestions(redoQuestions);
+  },
+  STATS_KEY : 'stats',
+  getStats(){
+    return this.getJsonArray(this.STATS_KEY);
+  },
+  saveStats(key, stats){
+    this.saveJsonArray(key, stats);
+  },
+  appendAndSaveStat(stat){
+    let stats = this.getStats();
+    stats.push(stat);
+    this.saveStats(this.STATS_KEY, stats);
   },
 
 };

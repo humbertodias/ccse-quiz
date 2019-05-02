@@ -6,6 +6,7 @@ Vue.use(IonicVueRouter);
 import HomePage from './views/Home.vue'
 import InfoPage from './views/Info.vue'
 import StatsPage from './views/Stats.vue'
+import ResultPage from './views/Result.vue'
 import RedoPage from './views/Redo.vue'
 import QuestionsPage from './views/Questions.vue'
 import ExamPage from './views/Exam.vue'
@@ -18,6 +19,7 @@ export default new IonicVueRouter({
     { path: '/', name: 'home', component: HomePage },
     { path: '/info', name:"info", component: InfoPage },
     { path: '/stats', name:"stats", component: StatsPage },
+    { path: '/result', name:"result", component: ResultPage },
     { path: '/redo', name:"redo", component: RedoPage },
     { path: '/questions', name:"questions", component: QuestionsPage },
     { path: '/exam', name:"exam", component: ExamPage },

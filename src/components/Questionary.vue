@@ -54,7 +54,7 @@ export default {
     next() {
         this.index++;
         if(this.hasFinished()) {
-          this.goToStats();
+          this.goToResult();
         } 
     },
     increment(isCorrect, selectedAnswerIndex) {
@@ -73,8 +73,8 @@ export default {
     hasFinished(){
       return this.index >= this.questions.length;
     },
-    goToStats() {
-      this.$router.push({ name: 'stats', 
+    goToResult() {
+      this.$router.push({ name: 'result', 
                 params: { numCorrect: this.numCorrect, numTotal: this.numTotal }});
     },
   },

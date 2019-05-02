@@ -4,7 +4,7 @@
     <ion-content>
       
       <ion-card>
-        <ion-item>
+        <ion-item href="https://examenes.cervantes.es/es/ccse/examen">
           <ion-label>Especificaciones de la pruba CCSE</ion-label>
           <ion-icon name="document" slot="end"></ion-icon>
         </ion-item>
@@ -27,14 +27,14 @@
       </ion-card>
 
       <ion-card>
-        <ion-item>
+        <ion-item href="https://examenes.cervantes.es/sites/default/files/Modelo-CCSE-2018.pdf">
           <ion-label>Modelo de prueba CCSE</ion-label>
           <ion-icon name="document" slot="end"></ion-icon>
         </ion-item>
       </ion-card>
 
       <ion-card>
-        <ion-item>
+        <ion-item href="https://examenes.cervantes.es/sites/default/files/ccse_manual_2019.pdf">
           <ion-label>
             Manual CCSE 2019
             <p>prepara los exámenes a partir de enero 2019</p>
