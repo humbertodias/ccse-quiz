@@ -26,7 +26,7 @@
 
         <ion-row>
           <ion-col class="ion-text-center">
-            <router-link to="questions">
+            <router-link to="tasks">
               <ion-card class="card-expand">
                 <ion-card-content>
                   <ion-icon size="large" name="help"></ion-icon>

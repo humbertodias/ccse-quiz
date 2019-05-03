@@ -1,9 +1,9 @@
 [
-	["Tarea 1", "Conocimiento del Gobierno, poderes e instituciones del Estado, leyes fundamentales y mecanismos de participacíon ciudadana"],
-	["Tarea 2", "Conocimiento sobre los deberes y derechos que comporta la nacionalidad española"],
-	["Tarea 3", "Conocimiento de la organización territorial y geografía física y política de España"],
-	["Tarea 4", "Conocimiento de las tradiciones, aspectos culturales y hechos históricos españoles relevantes"],
-	["Tarea 5", "Conocimiento de distintos aspectos de la vida cotidiana y comportamiento en sociedad. Conocimiento de trámites administrativos en España"],
-	["2016-2017", "Preguntas elimininadas en el catálogo de 2018, por si quieres estudiarlas también."],
-	["2018", "Preguntas eliminadas en el catálogo de 2019, por si quieres estudiarlas también."]
+	[1, "Tarea 1", "Conocimiento del Gobierno, poderes e instituciones del Estado, leyes fundamentales y mecanismos de participacíon ciudadana"],
+	[2, "Tarea 2", "Conocimiento sobre los deberes y derechos que comporta la nacionalidad española"],
+	[3, "Tarea 3", "Conocimiento de la organización territorial y geografía física y política de España"],
+	[4, "Tarea 4", "Conocimiento de las tradiciones, aspectos culturales y hechos históricos españoles relevantes"],
+	[5, "Tarea 5", "Conocimiento de distintos aspectos de la vida cotidiana y comportamiento en sociedad. Conocimiento de trámites administrativos en España"],
+	[6, "2016-2017", "Preguntas elimininadas en el catálogo de 2018, por si quieres estudiarlas también."],
+	[7, "2018", "Preguntas eliminadas en el catálogo de 2019, por si quieres estudiarlas también."]
 ]
