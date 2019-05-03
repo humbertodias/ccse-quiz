@@ -6,12 +6,15 @@
 
     <ion-item lines="none">
       <ion-icon
-        name="mic"
+        size="large"
+        name="volume-high"
         slot="end"
+        v-show="canSay()"
         @click="say(currentQuestion.question)"
         style="cursor: pointer"
       ></ion-icon>
       <ion-icon
+        size="large"
         name="help-circle-outline"
         slot="end"
         v-if="currentQuestion.hint"
@@ -136,6 +139,9 @@ export default {
     },
     say(text) {
       Speech.say(text);
+    },
+    canSay(){
+      return Speech.canSay()
     }
   }
 };

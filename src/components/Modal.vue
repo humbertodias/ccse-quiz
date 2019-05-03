@@ -8,7 +8,7 @@
           <ion-back-button default-href="/" @click="close"/>
         </ion-buttons>
 
-        <ion-icon size="large" name="mic" slot="end" @click="say" style="cursor: pointer"></ion-icon>
+        <ion-icon v-show="canSay()" size="large" name="volume-high" slot="end" @click="say" style="cursor: pointer"></ion-icon>
       </ion-toolbar>
     </ion-header>
     <ion-content padding class="new-line">{{ content }}</ion-content>
@@ -31,6 +31,9 @@ export default {
   methods: {
     say() {
       Speech.say(this.content);
+    },
+    canSay(){
+      return Speech.canSay()
     },
     close() {
       this.$ionic.modalController.dismiss(true);
