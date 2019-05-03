@@ -8,7 +8,7 @@
       <ion-card-header>
         <ion-card-title>
           <p>
-            <ion-checkbox checked="true" @click="tasksChecked[index] = !tasksChecked[index]"></ion-checkbox>
+            <ion-checkbox checked="tasksChecked[index]" @click="clickCheckbox(index)" />
             &nbsp;
             {{task[1]}}
           </p>
@@ -37,6 +37,10 @@ export default {
     this.loadQuestions();
   },
   methods: {
+    clickCheckbox(index){
+      this.tasksChecked[index] = !this.tasksChecked[index];
+      console.log('click', this.tasksChecked[index])
+    },
     loadTasks() {
       fetch("tareas.json", {
         method: "get"
@@ -50,19 +54,19 @@ export default {
           for (var i = 0; i < this.tasks.length; i++) {
             this.tasksChecked.push(true);
           }
-          console.log("mounted", this.tasksChecked.length);
+          
         });
     },
     loadQuestions() {
       fetch("preguntas.json", {
         method: "get"
       })
-        .then(response => {
-          return response.json();
-        })
-        .then(jsonData => {
-          this.questions = jsonData.results;
-        });
+      .then(response => {
+        return response.json();
+      })
+      .then(jsonData => {
+        this.questions = jsonData.results;
+      });
     },
     getTaskIds() {
       let ids = [];
@@ -75,13 +79,8 @@ export default {
     },
     goToQuestionary() {
       let taskIds = this.getTaskIds();
-      console.log("taskIds", taskIds);
       let questionsByTask = this.byTask(this.questions, taskIds);
-      console.log("questionsByTask", questionsByTask);
-      let ids = [];
-      for (var i = 0; i < questionsByTask.length; i++) {
-        ids.push(questionsByTask[i].id);
-      }
+      let ids = this.questionIds(questionsByTask);
       this.$router.push({
         name: "questions",
         params: { ids: ids }
@@ -91,6 +90,13 @@ export default {
       return ar.filter(q => {
         return taskIds.indexOf(q.task) > -1;
       });
+    },
+    questionIds(qs){
+      let ids = [];
+      for (let i = 0; i < qs.length; i++) {
+        ids.push(qs[i].id);
+      }
+      return ids;
     }
   }
 };
