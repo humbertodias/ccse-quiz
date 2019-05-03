@@ -6,7 +6,7 @@
       </ion-toolbar>
     </ion-header>
 
-    <ion-content>
+    <ion-content padding-vertical>
 
       <ion-grid>
 

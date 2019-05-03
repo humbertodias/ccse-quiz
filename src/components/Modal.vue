@@ -3,26 +3,40 @@
     <ion-header>
       <ion-toolbar>
         <ion-title>{{ title }}</ion-title>
+
+        <ion-buttons slot="start">
+          <ion-back-button default-href="/" @click="close"/>
+        </ion-buttons>
+
+        <ion-icon size="large" name="mic" slot="end" @click="say" style="cursor: pointer"></ion-icon>
       </ion-toolbar>
     </ion-header>
-    <ion-content padding class="new-line">
-      {{ content }}
-    </ion-content>
+    <ion-content padding class="new-line">{{ content }}</ion-content>
   </div>
 </template>
 
 <script>
+import Speech from "../speech";
+
 export default {
-  name: 'Modal',
+  name: "Modal",
   props: {
-    title: { type: String, default: 'Super Modal' },
+    title: undefined
   },
   data() {
     return {
-      content: 'Content',
-    }
+      content: "Content"
+    };
   },
-}
+  methods: {
+    say() {
+      Speech.say(this.content);
+    },
+    close() {
+      this.$ionic.modalController.dismiss(true);
+    }
+  }
+};
 </script>
 
 <style>

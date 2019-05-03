@@ -1,13 +1,16 @@
 <template>
   <div>
-
     <ion-item>
-      <ion-text>
-      {{ currentQuestion.id}} - {{ currentQuestion.question }}
-      </ion-text>
+      <ion-text>{{ currentQuestion.id}} - {{ currentQuestion.question }}</ion-text>
     </ion-item>
 
     <ion-item lines="none">
+      <ion-icon
+        name="mic"
+        slot="end"
+        @click="say(currentQuestion.question)"
+        style="cursor: pointer"
+      ></ion-icon>
       <ion-icon
         name="help-circle-outline"
         slot="end"
@@ -26,12 +29,12 @@
     >
       <ion-card-content>{{ answer }}</ion-card-content>
     </ion-card>
-
   </div>
 </template>
 
 <script>
 import Modal from "../components/Modal.vue";
+import Speech from "../speech";
 
 export default {
   props: {
@@ -49,6 +52,7 @@ export default {
       answerColor: "Light"
     };
   },
+  mounted: function() {},
   computed: {
     answers() {
       // this function is no longer used in finished code
@@ -71,7 +75,7 @@ export default {
   },
   methods: {
     selectAnswer(index) {
-      if(this.answered) return;
+      if (this.answered) return;
 
       this.selectedIndex = index;
       // auto submit
@@ -94,7 +98,9 @@ export default {
         ...this.currentQuestion.incorrect_answers,
         this.currentQuestion.correct_answer
       ];
-      this.shuffledAnswers = answers.sort(function() { return 0.5 - Math.random() });
+      this.shuffledAnswers = answers.sort(function() {
+        return 0.5 - Math.random();
+      });
       this.correctIndex = this.shuffledAnswers.indexOf(
         this.currentQuestion.correct_answer
       );
@@ -112,19 +118,24 @@ export default {
       }
     },
     openModal(title, content) {
-      return this.$ionic.modalController
-        .create({
-          component: Modal,
-          componentProps: {
-            data: {
-              content: content
-            },
-            propsData: {
-              title: title
-            }
+      let modal = this.$ionic.modalController.create({
+        component: Modal,
+        componentProps: {
+          data: {
+            content: content,
+            modal: modal
+          },
+          propsData: {
+            title: title
           }
-        })
-        .then(m => m.present());
+        }
+      });
+      modal.then(m => m.present());
+
+      return modal;
+    },
+    say(text) {
+      Speech.say(text);
     }
   }
 };
