@@ -6,14 +6,14 @@
       </ion-toolbar>
     </ion-header>
 
-    <ion-content padding-vertical>
+    <ion-content>
 
       <ion-grid>
 
         <ion-row>
           <ion-col class="ion-text-center">
             <router-link to="exam">
-              <ion-card class="card-expand">
+              <ion-card padding class="card-expand">
                 <ion-card-content>
                   <ion-icon size="large" name="clipboard"></ion-icon>
                   <h5>HACER EXAMEN</h5>
@@ -27,7 +27,7 @@
         <ion-row>
           <ion-col class="ion-text-center">
             <router-link to="tasks">
-              <ion-card class="card-expand">
+              <ion-card padding class="card-expand">
                 <ion-card-content>
                   <ion-icon size="large" name="help"></ion-icon>
                   <h5>300 Perguntas</h5>
@@ -38,7 +38,7 @@
           </ion-col>
           <ion-col class="ion-text-center">
             <router-link to="redo">
-              <ion-card class="card-expand">
+              <ion-card padding class="card-expand">
                 <ion-card-content>
                   <ion-icon size="large" name="timer"></ion-icon>
                   <h5>Repasar</h5>
@@ -52,7 +52,7 @@
         <ion-row>
           <ion-col class="ion-text-center">
             <router-link to="stats">
-              <ion-card class="card-expand">
+              <ion-card padding class="card-expand">
                 <ion-card-content>
                   <ion-icon size="large" name="stats"></ion-icon>
                   <h5>Estadisticas</h5>
@@ -64,7 +64,7 @@
 
           <ion-col class="ion-text-center">
             <router-link to="info">
-              <ion-card class="card-expand">
+              <ion-card padding class="card-expand">
                 <ion-card-content>
                   <ion-icon size="large" name="information-circle-outline"></ion-icon>
                   <h5>Informacion</h5>
@@ -78,7 +78,7 @@
         <ion-row>
           <ion-col class="ion-text-center">
             <router-link to="exam-years">
-              <ion-card class="card-expand">
+              <ion-card padding class="card-expand">
                 <ion-card-content>
                   <ion-icon size="large" name="clipboard"></ion-icon>
                   <h5>EXÁMENES ANTERIORES</h5>
@@ -88,7 +88,6 @@
             </router-link>
           </ion-col>
         </ion-row>
-
 
       </ion-grid>
     </ion-content>
@@ -105,6 +104,6 @@ ion-col > a {
 }
 
 .card-expand {
-    height: 100%;
+  height: 100%;
 }
 </style>
