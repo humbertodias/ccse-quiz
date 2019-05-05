@@ -7,13 +7,13 @@
     <ion-item lines="none">
         <ion-grid>
           <ion-row>
-            <ion-col><ion-img src="flags/es.png"></ion-img></ion-col>
-            <ion-col><ion-img src="flags/en.png"></ion-img></ion-col>
-            <ion-col><ion-img src="flags/fr.png"></ion-img></ion-col>
-            <ion-col><ion-img src="flags/pt.png"></ion-img></ion-col>
-            <ion-col><ion-img src="flags/he.png"></ion-img></ion-col>
-            <ion-col><ion-img src="flags/tk.png"></ion-img></ion-col>
-            <ion-col><ion-img src="flags/ar.png"></ion-img></ion-col>
+            <ion-col><ion-img cache="true" src="flags/es.png"></ion-img></ion-col>
+            <ion-col><ion-img cache="true" src="flags/en.png"></ion-img></ion-col>
+            <ion-col><ion-img cache="true" src="flags/fr.png"></ion-img></ion-col>
+            <ion-col><ion-img cache="true" src="flags/pt.png"></ion-img></ion-col>
+            <ion-col><ion-img cache="true" src="flags/he.png"></ion-img></ion-col>
+            <ion-col><ion-img cache="true" src="flags/tk.png"></ion-img></ion-col>
+            <ion-col><ion-img cache="true" src="flags/ar.png"></ion-img></ion-col>
           </ion-row>
         </ion-grid>
     </ion-item>
