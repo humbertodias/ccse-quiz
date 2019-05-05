@@ -16,7 +16,7 @@
         <ion-card-content>{{resultLabel}} con {{resultPercentage}}% era esperado 60%</ion-card-content>
       </ion-card>
 
-      <ion-card>
+      <ion-card padding>
         <ion-item>
           <ion-label>Correctas</ion-label>
           <ion-badge slot="end" color="success">{{numCorrect}}</ion-badge>
@@ -25,7 +25,7 @@
           <ion-label>Incorrectas</ion-label>
           <ion-badge slot="end" color="danger">{{numTotal-numCorrect}}</ion-badge>
         </ion-item>
-        <ion-item>
+        <ion-item lines="none">
           <ion-label>Total</ion-label>
           <ion-badge slot="end" color="primary">{{numTotal}}</ion-badge>
         </ion-item>
