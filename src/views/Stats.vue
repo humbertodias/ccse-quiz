@@ -69,10 +69,10 @@ export default {
     this.summary();
   },
   methods: {
-    sortByDateDesc(ar){
+    sortByDateDesc(ar) {
       return ar.sort(function(a, b) {
-                                return new Date(b.date) - new Date(a.date);
-                                });
+        return new Date(b.date) - new Date(a.date);
+      });
     },
     summary() {
       for (var stat of this.stats) {
@@ -81,12 +81,11 @@ export default {
       }
 
       let total = this.corrects + this.wrongs;
-      this.resultPercentage = Math.round( (this.corrects / total) * 100) || 0;
-      if(this.resultPercentage >= 60){
-        this.resultLabel = 'APTO';
-        this.resultColor = 'success';
-      } 
-
+      this.resultPercentage = Math.round((this.corrects / total) * 100) || 0;
+      if (this.resultPercentage >= 60) {
+        this.resultLabel = "APTO";
+        this.resultColor = "success";
+      }
     }
   }
 };

@@ -4,7 +4,7 @@
     <ion-content>
       
       <ion-card>
-        <ion-item href="https://examenes.cervantes.es/es/ccse/examen">
+        <ion-item href="https://examenes.cervantes.es/sites/default/files/especificaciones_prueba_ccse.pdf">
           <ion-label>Especificaciones de la prueba</ion-label>
           <ion-icon name="document" slot="end"></ion-icon>
         </ion-item>
@@ -37,8 +37,9 @@
       </ion-card>
       </router-link>
 
+
       <ion-card>
-        <ion-item>
+        <ion-item href="https://examenes.cervantes.es/sites/default/files/inventario_general_contenidos_prueba_CCSE.pdf">
           <ion-label>Inventario general de contenidos</ion-label>
           <ion-icon name="document" slot="end"></ion-icon>
         </ion-item>
