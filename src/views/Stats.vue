@@ -65,9 +65,15 @@ export default {
   },
   mounted: function() {
     this.stats = storage.getStats();
+    this.stats = this.sortByDateDesc(this.stats);
     this.summary();
   },
   methods: {
+    sortByDateDesc(ar){
+      return ar.sort(function(a, b) {
+                                return new Date(b.date) - new Date(a.date);
+                                });
+    },
     summary() {
       for (var stat of this.stats) {
         this.corrects += stat.numCorrect;
