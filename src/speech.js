@@ -1,12 +1,32 @@
+import { TextToSpeech } from '@ionic-native/text-to-speech';
+
 // Using the /build/artyom.js file
 import Artyom from 'artyom.js';
 const artyom = new Artyom();
+
 export default {
+  components: {
+    TextToSpeech
+  },
   say(text) {
-    artyom.say(text);
+    if (this.isMobile()) {
+      let options = {
+        text: text,
+        locale: 'es-ES',
+        rate: 0.75
+      };
+      TextToSpeech.speak(options)
+      .then(() => console.log('Success'))
+      .catch((reason) => console.log(reason));
+    }
+    else{
+      artyom.say(text);
+    }
   },
   canSay() {
-    return artyom.speechSupported();
+    return true;
+  }, isMobile() {
+    return !artyom.speechSupported();
   }
 };
 

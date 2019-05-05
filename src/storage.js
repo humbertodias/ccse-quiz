@@ -23,8 +23,16 @@ export default {
   },
   appendAndSaveRedoQuestion(question){
     let redoQuestions = this.getRedoQuestions();
-    redoQuestions.push(question);
+    if(!this.hasQuestion(redoQuestions, question)){
+      redoQuestions.push(question);
+    }
     this.saveRedoQuestions(redoQuestions);
+  },
+  hasQuestion(qs,question){
+    let found = qs.filter(function (q) {
+      return q.id == question.id;
+    });
+    return found.length != 0;
   },
   removeAndSaveRedoQuestion(question){
     let allRedoQuestions = this.getRedoQuestions();
