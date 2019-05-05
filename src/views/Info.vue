@@ -45,21 +45,23 @@
       </ion-card>
 
       <ion-card>
-        <ion-item href="https://examenes.cervantes.es/sites/default/files/Modelo-CCSE-2018.pdf">
+        <ion-item href="pdf/modelo_examen_ccse_2019.pdf">
           <ion-label>Modelo de prueba CCSE</ion-label>
           <ion-icon name="document" slot="end"></ion-icon>
         </ion-item>
       </ion-card>
 
       <ion-card>
-        <ion-item href="https://examenes.cervantes.es/sites/default/files/ccse_manual_2019.pdf">
+        <ion-item href="pdf/ccse_manual_2019.pdf">
           <ion-label>
-            Manual CCSE 2019
+            Manual CCSE
             <p>preparación para los exámenes</p>
           </ion-label>
 
           <ion-icon name="document" slot="end"></ion-icon>
         </ion-item>
+
+
       </ion-card>
 
       <ion-card>
