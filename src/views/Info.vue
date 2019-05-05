@@ -4,7 +4,7 @@
     <ion-content>
       
       <ion-card>
-        <ion-item href="https://examenes.cervantes.es/sites/default/files/especificaciones_prueba_ccse.pdf">
+        <ion-item href="pdf/especificaciones_prueba.pdf">
           <ion-label>Especificaciones de la prueba</ion-label>
           <ion-icon name="document" slot="end"></ion-icon>
         </ion-item>
@@ -39,21 +39,21 @@
 
 
       <ion-card>
-        <ion-item href="https://examenes.cervantes.es/sites/default/files/inventario_general_contenidos_prueba_CCSE.pdf">
+        <ion-item href="pdf/inventario.pdf">
           <ion-label>Inventario general de contenidos</ion-label>
           <ion-icon name="document" slot="end"></ion-icon>
         </ion-item>
       </ion-card>
 
       <ion-card>
-        <ion-item href="pdf/modelo_examen_ccse_2019.pdf">
+        <ion-item href="pdf/modelo_examen.pdf">
           <ion-label>Modelo de prueba CCSE</ion-label>
           <ion-icon name="document" slot="end"></ion-icon>
         </ion-item>
       </ion-card>
 
       <ion-card>
-        <ion-item href="pdf/ccse_manual_2019.pdf">
+        <ion-item href="pdf/manual.pdf">
           <ion-label>
             Manual CCSE
             <p>preparación para los exámenes</p>
