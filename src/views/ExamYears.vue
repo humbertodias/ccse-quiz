@@ -5,7 +5,7 @@
     </ion-toolbar>
 
     <ion-content>
-      <ion-card v-for="item in items" :key="item[0]" @click="goToQuestionary(item[1])">
+      <ion-card style="cursor: pointer;" v-for="item in items" :key="item[0]" @click="goToQuestionary(item[1])">
         <ion-item lines="none">
           <ion-label>
             <h3>{{item[0]}}</h3>

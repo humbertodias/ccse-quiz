@@ -1,7 +1,8 @@
 <template>
   <div>
+    
     <ion-item>
-      <ion-text>{{ currentQuestion.id}} - {{ currentQuestion.question }}</ion-text>
+      <ion-text padding>{{ currentQuestion.id}} - {{ currentQuestion.question }}</ion-text>
     </ion-item>
 
     <ion-item lines="none">
@@ -23,7 +24,7 @@
       ></ion-icon>
     </ion-item>
 
-    <ion-card
+    <ion-card padding
       v-for="(answer, index) in shuffledAnswers"
       :key="index"
       @click.prevent="selectAnswer(index)"
@@ -140,8 +141,8 @@ export default {
     say(text) {
       Speech.say(text);
     },
-    canSay(){
-      return Speech.canSay()
+    canSay() {
+      return Speech.canSay();
     }
   }
 };

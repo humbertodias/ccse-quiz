@@ -1,24 +1,13 @@
 <template>
   <IonVuePage title="Tareas">
+    <ion-list>
+      <ion-item v-for="(task, index) in tasks" :key="index">
+        <ion-label>{{task[1]}}</ion-label>
+        <ion-checkbox slot="end" checked="tasksChecked[index]" @click="clickCheckbox(index)" />
+      </ion-item>
+    </ion-list>        
     <ion-card no-padding class="noborder">
       <ion-button expand="full" @click="goToQuestionary">Empezar</ion-button>
-    </ion-card>
-
-    <ion-card v-for="(task, index) in tasks" :key="index">
-      <ion-card-header>
-        <ion-card-title>
-          <p>
-            <ion-checkbox checked="tasksChecked[index]" @click="clickCheckbox(index)" />
-            &nbsp;
-            {{task[1]}}
-          </p>
-        </ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-item lines="none">
-          <ion-text>{{task[2]}}</ion-text>
-        </ion-item>
-      </ion-card-content>
     </ion-card>
   </IonVuePage>
 </template>
