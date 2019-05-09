@@ -1,6 +1,6 @@
 {
   "appId": "com.polygon4games.ccse",
-  "appName": "ccse",
+  "appName": "CCSE",
   "bundledWebRuntime": false,
   "webDir": "dist"
 }
