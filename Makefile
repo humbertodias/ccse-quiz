@@ -15,7 +15,7 @@ ios-dep:
 ios:	clean	ios-dep
 	npm run build
 	npx cap add ios
-	find android -name "*.ipa"
+	find ios -name "*.ipa"
 
 android-icons:	android-icons-foreground	android-icons-launcher-foreground	android-icons-launcher	android-splash
 
