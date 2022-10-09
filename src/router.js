@@ -16,9 +16,11 @@ import ExamYearsPage from './views/ExamYears.vue'
 import ExamPage from './views/Exam.vue'
 import TasksPage from './views/Tasks.vue'
 
+console.log("process.env.BASE_URL", process.env.BASE_URL)
+
 export default new IonicVueRouter({
   mode: 'history',
-  base: process.env.BASE_URL ,
+  base: process.env.BASE_URL,
   routes: [
     { path: '/', name: 'home', component: HomePage },
     { path: '/info', name:"info", component: InfoPage },

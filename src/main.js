@@ -16,6 +16,7 @@ Vue.use(Ionic);
 // Register as global component to be used as boilerplate
 Vue.component('IonVuePage', IonVuePage);
 
+Vue.config.productionTip = false;
 Vue.config.ignoredElements = [/^ion-/];
 
 new Vue({
