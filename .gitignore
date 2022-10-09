@@ -67,5 +67,3 @@ typings/
 android/
 ios/
 dist/
-
-package-lock.json
