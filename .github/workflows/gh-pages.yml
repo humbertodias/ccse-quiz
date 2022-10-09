@@ -20,9 +20,16 @@ jobs:
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
           ref: main
 
+      - name: setup git config
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+          git config --global init.defaultBranch main
+
+      - name: deploy
       - uses: actions/setup-node@v3
         with:
           node-version: '14.x'
-      - run: git config --global init.defaultBranch main
-      - run: npm install
-      - run: npm run deploy
+        run: |
+          npm install
+          npm run deploy
