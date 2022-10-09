@@ -19,16 +19,16 @@ jobs:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
           ref: main
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14.x'
       - name: setup git config
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
           git config --global init.defaultBranch main
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '14.x'
-      - name: deploy
+      - name: deploy gh-pages
         run: |
           npm install
           npm run deploy
