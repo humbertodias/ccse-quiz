@@ -18,7 +18,7 @@ import TasksPage from './views/Tasks.vue'
 
 export default new IonicVueRouter({
   mode: 'history',
-  base: process.env.BASE_URL,
+  base: process.env.NODE_ENV === 'production' ? '/ccse-quiz/' : process.env.BASE_URL ,
   routes: [
     { path: '/', name: 'home', component: HomePage },
     { path: '/info', name:"info", component: InfoPage },
