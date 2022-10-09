@@ -20,7 +20,7 @@
     "bootstrap": "4.3.1",
     "bootstrap-vue": "2.0.0-rc.13",
     "cordova-plugin-tts": "^0.2.3",
-    "lodash": "4.17.11",
+    "lodash": "4.17.21",
     "vue": "^2.6.10",
     "vue-router": "^3.0.6",
     "vue2-storage": "^3.4.0"
