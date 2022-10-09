@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint --fix"
+    "lint": "vue-cli-service lint --fix",
+    "deploy": "sh deploy.sh"
   },
   "dependencies": {
     "@capacitor/android": "^1.0.0-beta.19",
