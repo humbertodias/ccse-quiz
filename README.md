@@ -8,7 +8,10 @@ Se organiza a partir de dos grandes apartados, cada uno de los cuales correspond
 
 # Probar
 
-[Play](https://humbertodias.github.io/ccse-quiz)
+Accede al [enlace](https://humbertodias.github.io/ccse-quiz) y instale
+
+<img width="1058" alt="imagen" src="https://user-images.githubusercontent.com/9255997/194907136-439e8a9a-d8c0-4ab1-9380-757d21ef7903.png">
+
 
 # Ref
 * [vue 2](https://vuejs.org) for react DOM
