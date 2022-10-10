@@ -3,11 +3,12 @@ clean:
 
 build:
 	npm run build
+
 run:
+	rm -f ccse-quiz
 	ln -s ./dist ccse-quiz
 	echo "http://localhost:8080/ccse-quiz"
-	http-server .
-	unlink ccse-quiz
+	http-server . -g -i
 
 android:	clean
 	npm run build
