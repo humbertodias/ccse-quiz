@@ -102,7 +102,18 @@
 </template>
 
 <script>
-export default {};
+import Speech from "../speech";
+
+export default {
+  mounted(){
+    this.sayIntro()
+  },
+  methods: {
+    sayIntro(){
+      Speech.say("Hola! Bienvenido al CCSE. Preparate bien para su examen y buena suerte")
+    }
+  }
+};
 </script>
 
 <style>

@@ -7,6 +7,7 @@
 
 <script>
 import Questionary from '../components/Questionary.vue'
+import Speech from "../speech";
 
 export default {
   components: {
@@ -26,6 +27,7 @@ export default {
     })
     .then(jsonData => {
       this.questions = this.q25(jsonData.results);
+      Speech.say(`Su examen contiene ${this.questions.length} questiones. Ya puede empezar`)
     });
   },
   methods: {

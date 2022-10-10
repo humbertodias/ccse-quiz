@@ -36,6 +36,8 @@
 
 <script>
 import storage from "../storage";
+import Speech from "../speech";
+
 
 export default {
   data: function() {
@@ -75,6 +77,9 @@ export default {
       ionIcon: this.ionIcon
     };
     storage.appendAndSaveStat(stat);
+
+    Speech.say(`Su resultado es ${this.resultLabel}`)
+
   },
   methods: {
     goToHome() {
