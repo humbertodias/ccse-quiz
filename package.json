@@ -21,10 +21,10 @@
     "bootstrap-vue": "2.0.0-rc.13",
     "cordova-plugin-tts": "^0.2.3",
     "lodash": "4.17.21",
-    "vue": "^2.6.10",
+    "vue": "^2.7.10",
     "vue-router": "^3.0.6",
     "vue2-storage": "^3.4.0",
-    "ionicons": "^4.5.9-1"
+    "ionicons": "^4.6.4-1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.7.0",

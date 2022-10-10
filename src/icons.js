@@ -1,5 +1,5 @@
 // icons
-import { add, volumeHigh, clipboard, helpCircleOutline, help, timer, stats, informationCircleOutline, thumbsUp, document, arrowDroprightCircle, globe, closeCircle, home } from "ionicons/icons";
+import { add, volumeHigh, clipboard, helpCircleOutline, help, timer, stats, informationCircleOutline, thumbsUp, document, arrowDroprightCircle, globe, closeCircle, home, logoGithub } from "ionicons/icons";
 import { addIcons } from "ionicons";
 addIcons({
   "ios-add": add.ios,
@@ -17,4 +17,5 @@ addIcons({
   "md-globe": globe.md,
   "md-close-circle": closeCircle.md,
   "md-home": home.md,
+  "logo-github": logoGithub,
 });

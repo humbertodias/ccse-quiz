@@ -3,6 +3,13 @@
     <ion-header>
       <ion-toolbar color="danger">
         <ion-title>CCSE</ion-title>
+        <ion-buttons slot="primary">
+          <router-link to="github">
+            <ion-button fill="clear" color="light">
+              <ion-icon size="large" name="logo-github"></ion-icon>
+            </ion-button>
+          </router-link>
+        </ion-buttons>
       </ion-toolbar>
     </ion-header>
 

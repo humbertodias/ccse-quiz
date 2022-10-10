@@ -35,6 +35,10 @@ export default new IonicVueRouter({
     { path: '/exam-years', name:"exam-years", component: ExamYearsPage },
     { path: '/exam', name:"exam", component: ExamPage },
     { path: '/tasks', name:"tasks", component: TasksPage },
+    { path: '/github', name:"github",
+    beforeEnter() {                    
+      window.open("https://github.com/humbertodias/ccse-quiz", '_blank');
+  } },
   ]
 });
 
