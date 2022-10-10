@@ -9,6 +9,6 @@ cd dist
 git init
 git add -A
 git commit -m 'New Deployment'
-git push -f git@github.com:humbertodias/ccse-quiz.git main:gh-pages
+git push -f https://github.com/humbertodias/ccse-quiz.git `git rev-parse HEAD`:gh-pages
 
 cd -
