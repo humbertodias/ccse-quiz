@@ -4,7 +4,7 @@
       <ion-card>
         <ion-item :href="Config.PDF_ESPEC">
           <ion-label>Especificaciones de la prueba</ion-label>
-          <ion-icon name="document" slot="end"></ion-icon>
+          <ion-icon md="md-document" ios="ios-document" slot="end"></ion-icon>
         </ion-item>
       </ion-card>
 
@@ -12,7 +12,7 @@
         <ion-card>
           <ion-item>
             <ion-label>Glosario Multilingue</ion-label>
-            <ion-icon name="arrow-dropright-circle" slot="end"></ion-icon>
+            <ion-icon md="md-arrow-dropright-circle" ios="ios-arrow-dropright-circle" slot="end"></ion-icon>
           </ion-item>
         </ion-card>
       </router-link>
@@ -21,7 +21,7 @@
         <ion-card>
           <ion-item>
             <ion-label>Enlaces</ion-label>
-            <ion-icon name="arrow-dropright-circle" slot="end"></ion-icon>
+            <ion-icon md="md-arrow-dropright-circle" ios="ios-arrow-dropright-circle" slot="end"></ion-icon>
           </ion-item>
         </ion-card>
       </router-link>
@@ -30,7 +30,7 @@
         <ion-card>
           <ion-item>
             <ion-label>Acrónimos</ion-label>
-            <ion-icon name="arrow-dropright-circle" slot="end"></ion-icon>
+            <ion-icon md="md-arrow-dropright-circle" ios="ios-arrow-dropright-circle" slot="end"></ion-icon>
           </ion-item>
         </ion-card>
       </router-link>
@@ -38,14 +38,14 @@
       <ion-card>
         <ion-item :href="Config.PDF_INVENTORY">
           <ion-label>Inventario general de contenidos</ion-label>
-          <ion-icon name="document" slot="end"></ion-icon>
+          <ion-icon md="md-document" ios="ios-document" slot="end"></ion-icon>
         </ion-item>
       </ion-card>
 
       <ion-card>
         <ion-item :href="Config.PDF_MODEL">
           <ion-label>Modelo de prueba CCSE</ion-label>
-          <ion-icon name="document" slot="end"></ion-icon>
+          <ion-icon md="md-document" ios="ios-document" slot="end"></ion-icon>
         </ion-item>
       </ion-card>
 
@@ -56,7 +56,7 @@
             <p>preparación para los exámenes</p>
           </ion-label>
 
-          <ion-icon name="document" slot="end"></ion-icon>
+          <ion-icon md="md-document" ios="ios-document" slot="end"></ion-icon>
         </ion-item>
       </ion-card>
 
@@ -66,7 +66,7 @@
             Sitio web oficial
             <p>examenes.cervantes.es/es/ccse</p>
           </ion-label>
-          <ion-icon name="globe" slot="end"></ion-icon>
+          <ion-icon md="md-globe" ios="ios-globe" slot="end"></ion-icon>
         </ion-item>
       </ion-card>
     </ion-content>

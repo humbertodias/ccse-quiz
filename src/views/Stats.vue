@@ -5,7 +5,7 @@
         <ion-col>
           <ion-card class="ion-text-center">
             <ion-card-header>
-              <ion-icon size="large" name="thumbs-up"></ion-icon>
+              <ion-icon size="large" md="md-thumbs-up" ios="ios-thumbs-up"></ion-icon>
             </ion-card-header>
             <ion-card-content>
               {{corrects}} Correctas
@@ -16,7 +16,7 @@
         <ion-col>
           <ion-card class="ion-text-center">
             <ion-card-header>
-              <ion-icon size="large" name="close-circle"></ion-icon>
+              <ion-icon size="large" md="close-circle" ios="ios-close-circle"></ion-icon>
             </ion-card-header>
             <ion-card-content>
               {{wrongs}} Fallos

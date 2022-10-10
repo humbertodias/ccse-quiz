@@ -22,7 +22,7 @@
             <router-link to="exam">
               <ion-card padding class="card-expand">
                 <ion-card-content>
-                  <ion-icon size="large" name="clipboard"></ion-icon>
+                  <ion-icon size="large" md="md-clipboard" ios="ios-clipboard"></ion-icon>
                   <h5>HACER EXAMEN</h5>
                   <h6>25 preguntas aleatorias</h6>
                 </ion-card-content>
@@ -36,7 +36,7 @@
             <router-link to="tasks">
               <ion-card padding class="card-expand">
                 <ion-card-content>
-                  <ion-icon size="large" name="help"></ion-icon>
+                  <ion-icon size="large" md="md-help" ios="ios-help"></ion-icon>
                   <h5>300 Perguntas</h5>
                   <h6>Todas las preguntas posibles</h6>
                 </ion-card-content>
@@ -47,7 +47,7 @@
             <router-link to="redo">
               <ion-card padding class="card-expand">
                 <ion-card-content>
-                  <ion-icon size="large" name="timer"></ion-icon>
+                  <ion-icon size="large" md="md-timer" ios="ios-timer"></ion-icon>
                   <h5>Repasar</h5>
                   <h6>Repetir preguntas que fallaste</h6>
                 </ion-card-content>
@@ -61,7 +61,7 @@
             <router-link to="stats">
               <ion-card padding class="card-expand">
                 <ion-card-content>
-                  <ion-icon size="large" name="stats"></ion-icon>
+                  <ion-icon size="large" md="md-stats" ios="ios-stats"></ion-icon>
                   <h5>Estadisticas</h5>
                   <h6>Tu progreso</h6>
                 </ion-card-content>
@@ -73,7 +73,7 @@
             <router-link to="info">
               <ion-card padding class="card-expand">
                 <ion-card-content>
-                  <ion-icon size="large" name="information-circle-outline"></ion-icon>
+                  <ion-icon size="large" md="md-information-circle-outline" ios="ios-information-circle-outline"></ion-icon>
                   <h5>Informacion</h5>
                   <h6>Material para estudiar</h6>
                 </ion-card-content>
@@ -87,7 +87,7 @@
             <router-link to="exam-years">
               <ion-card padding class="card-expand">
                 <ion-card-content>
-                  <ion-icon size="large" name="clipboard"></ion-icon>
+                  <ion-icon size="large" md="md-clipboard" ios="ios-clipboard"></ion-icon>
                   <h5>EXÁMENES ANTERIORES</h5>
                   <h6>25 preguntas</h6>
                 </ion-card-content>

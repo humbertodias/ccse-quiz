@@ -8,7 +8,8 @@
     <ion-item lines="none">
       <ion-icon
         size="large"
-        name="volume-high"
+        md="md-volume-high"
+        ios="ios-volume-high"
         slot="end"
         v-show="canSay()"
         @click="say(currentQuestion.question)"
@@ -16,7 +17,8 @@
       ></ion-icon>
       <ion-icon
         size="large"
-        name="help-circle-outline"
+        md="md-help-circle-outline"
+        ios="ios-help-circle-outline"
         slot="end"
         v-if="currentQuestion.hint"
         @click="openModal(currentQuestion.id,currentQuestion.hint)"

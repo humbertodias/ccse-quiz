@@ -8,7 +8,7 @@
           <ion-back-button default-href="/" @click="close"/>
         </ion-buttons>
 
-        <ion-icon v-show="canSay()" size="large" name="volume-high" slot="end" @click="say" style="cursor: pointer"></ion-icon>
+        <ion-icon v-show="canSay()" size="large" md="md-volume-high" ios="ios-volume-high" slot="end" @click="say" style="cursor: pointer"></ion-icon>
       </ion-toolbar>
     </ion-header>
     <ion-content padding class="new-line">{{ content }}</ion-content>
