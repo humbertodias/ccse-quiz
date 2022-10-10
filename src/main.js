@@ -9,6 +9,10 @@ import IonVuePage from '@/components/IonVuePage.vue';
 import Ionic from '@ionic/vue';
 import '@ionic/core/css/ionic.bundle.css';
 
+// pwa
+import wb from "./registerServiceWorker";
+Vue.prototype.$workbox = wb;
+
 // Enable the ionic-vue plugin
 Vue.use(Ionic);
 

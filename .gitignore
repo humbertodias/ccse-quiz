@@ -67,3 +67,5 @@ typings/
 android/
 ios/
 dist/
+
+.DS_Store
