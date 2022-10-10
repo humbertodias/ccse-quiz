@@ -4,11 +4,10 @@ clean:
 build:
 	npm run build
 
-run:
+run:	build
 	rm -f ccse-quiz
 	ln -s ./dist ccse-quiz
-	echo "http://localhost:8080/ccse-quiz"
-	http-server . -g -i
+	http-server . -g -i -o ccse-quiz
 
 android:	clean
 	npm run build
@@ -66,5 +65,3 @@ android-splash:
 
 vue-cli-install:
 	npm install -g @vue/cli
-
-
