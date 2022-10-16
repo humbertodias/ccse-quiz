@@ -1,0 +1,67 @@
+{
+  "name": "ccse-quiz",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint --fix",
+    "deploy": "sh deploy.sh"
+  },
+  "dependencies": {
+    "@capacitor/android": "^2.1.2",
+    "@capacitor/cli": "^2.1.2",
+    "@capacitor/core": "^2.1.2",
+    "@capacitor/ios": "^2.1.2",
+    "@ionic-native/core": "^5.5.1",
+    "@ionic-native/text-to-speech": "^5.5.1",
+    "@ionic/vue": "0.0.9",
+    "artyom.js": "^1.0.6",
+    "bootstrap": "5.2.2",
+    "bootstrap-vue": "2.22.0",
+    "cordova-plugin-tts-advanced": "^0.5.2",
+    "ionicons": "^4.6.4-1",
+    "lodash": "4.17.21",
+    "register-service-worker": "^1.7.2",
+    "vue": "^2.7.10",
+    "vue-router": "^3.0.6",
+    "vue2-storage": "^3.4.0",
+    "workbox-webpack-plugin": "^6.5.4"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.7.0",
+    "@vue/cli-plugin-eslint": "^3.7.0",
+    "@vue/cli-plugin-pwa": "4.5.17",
+    "@vue/cli-service": "^3.7.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {
+      "no-console": 0
+    },
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
