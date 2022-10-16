@@ -8,9 +8,13 @@ Se organiza a partir de dos grandes apartados, cada uno de los cuales correspond
 
 # Probar
 
-Accede al [enlace](https://humbertodias.github.io/ccse-quiz) y instale
+Accede al [enlace](https://humbertodias.github.io/ccse-quiz) y instale en su desktop
 
 <img width="1058" alt="imagen" src="https://user-images.githubusercontent.com/9255997/194907136-439e8a9a-d8c0-4ab1-9380-757d21ef7903.png">
+
+o en tu celular haciendo clic en **Add ccse-quiz to Home Screen**
+
+<img height="800" alt="imagen" src="https://user-images.githubusercontent.com/9255997/195323489-8db2659a-db31-4714-864a-32efec31c0f3.jpeg">
 
 
 # Ref
