@@ -1,3 +1,5 @@
+[![GitHub Pages](https://github.com/humbertodias/ccse-quiz/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/humbertodias/ccse-quiz/actions/workflows/gh-pages.yml)
+
 # CCSE Quiz
 
 Es la prueba de conocimientos constitucionales y socioculturales de España (prueba CCSE) es una prueba de examen elaborada por el Instituto Cervantes que evalúa, por medio de distintas tareas, el conocimiento de la Constitución y de la realidad social y cultural españolas. 
